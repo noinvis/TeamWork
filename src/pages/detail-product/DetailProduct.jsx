@@ -10,7 +10,6 @@ import img4 from './images/twitter.png'
 
 
 const DetailProduct = () => {
-  const navigate = useNavigate();
   const { id } = useParams();
   const [imageIndex, setImageIndex] = useState(0) 
   const { data, error, loading } = useFetch(`/products/${id}`);
