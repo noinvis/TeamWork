@@ -37,9 +37,6 @@ const DetailProduct = () => {
                 <>
                 <div className="flex flex-col gap-[32px] max-[1150px]:flex-row max-[1150px]:justify-center max-[420px]:gap-[10px]">
                   <img width={75} height={80} src={item} key={inx} alt="" onClick={() => setImageIndex(inx)} className="bg-[#F9F1E7] rounded-[10px]"/>
-                  <img width={75} height={80} src={item} key={inx} alt="" onClick={() => setImageIndex(inx)} className="bg-[#F9F1E7] rounded-[10px]"/>
-                  <img width={75} height={80} src={item} key={inx} alt="" onClick={() => setImageIndex(inx)} className="bg-[#F9F1E7] rounded-[10px]"/>
-                  <img width={75} height={80} src={item} key={inx} alt="" onClick={() => setImageIndex(inx)} className="bg-[#F9F1E7] rounded-[10px]"/>
                 </div>
                 </>
               ))
