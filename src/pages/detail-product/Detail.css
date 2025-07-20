@@ -39,3 +39,11 @@ button:hover{
 pre:hover{
     cursor: pointer;
 }
+.color{
+    border: 5px solid white;
+    transition: .3s;
+}
+.color:hover{
+    border: 2px solid white;
+    cursor: pointer;
+}
