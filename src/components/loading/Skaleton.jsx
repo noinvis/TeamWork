@@ -71,4 +71,4 @@ const Skaleton = () => {
   );
 };
 
-export default Skaleton;
+export default React.memo(Skaleton)
