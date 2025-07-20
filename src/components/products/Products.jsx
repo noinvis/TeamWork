@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { memo } from "react";
 
 import { useFetch } from "../../hooks/useFetch";
 import Skaleton from "../loading/Skaleton";
@@ -85,4 +85,4 @@ const Products = () => {
   );
 };
 
-export default React.memo(Products);
+export default memo(Products);
