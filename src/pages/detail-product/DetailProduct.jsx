@@ -72,9 +72,9 @@ const DetailProduct = () => {
           </ul>
           <p className="text-[#9F9F9F] mt-[10px]">Color</p>
           <div className="flex gap-[1rem] max-[1150px]:justify-center">
-            <div className="size-[30px] rounded-[50%] bg-[#816DFA]"></div>
-            <div className="size-[30px] rounded-[50%] bg-black"></div>
-            <div className="size-[30px] rounded-[50%] bg-[#B88E2F]"></div>
+            <div className="size-[40px] rounded-[50%] bg-[#816DFA] color"></div>
+            <div className="size-[40px] rounded-[50%] bg-black color"></div>
+            <div className="size-[40px] rounded-[50%] bg-[#B88E2F] color"></div>
           </div>
           <div className="flex gap-[1rem] mt-[20px] max-[1150px]:justify-center max-[565px]:flex-wrap">
             <div className="border1 flex gap-[35px] rounded-[10px] py-[18px] px-[10px]">
