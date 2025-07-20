@@ -7,8 +7,6 @@ import img from './images/Group 88.png'
 import img2 from './images/facebook.png'
 import img3 from './images/in.png'
 import img4 from './images/twitter.png'
-import { FaPlus } from "react-icons/fa6";
-import { FiMinus } from "react-icons/fi";
 
 
 const DetailProduct = () => {
@@ -80,9 +78,9 @@ const DetailProduct = () => {
           </div>
           <div className="flex gap-[1rem] mt-[20px] max-[1150px]:justify-center max-[565px]:flex-wrap">
             <div className="border1 flex gap-[35px] rounded-[10px] py-[18px] px-[10px]">
-              <button onClick={() => setNum(p => p > 1 ? p - 1 : 1)}><FiMinus /></button>
+              <button onClick={() => setNum(p => p > 1 ? p - 1 : 1)}>-</button>
               <p className="text-[18px] font-medium">{num}</p>
-              <button onClick={() => setNum(p => p + 1)}><FaPlus /></button>
+              <button onClick={() => setNum(p => p + 1)}>+</button>
             </div>
             <button className="border1 rounded-[10px] capitalize text-[20px] px-[40px] py-[20px]">Add To Cart</button>
             <button className="border1 rounded-[10px] text-[20px] px-[40px] py-[20px]">+ Compare</button>
