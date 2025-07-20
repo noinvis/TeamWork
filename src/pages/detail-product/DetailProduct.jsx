@@ -1,6 +1,6 @@
 import React from "react";
 import { memo, useLayoutEffect, useState } from "react";
-import { NavLink, useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import "./Detail.css"
 import img from './images/Group 88.png'
@@ -82,15 +82,15 @@ const DetailProduct = () => {
               <p className="text-[18px] font-medium">{num}</p>
               <button onClick={() => setNum(p => p + 1)}>+</button>
             </div>
-            <button className="border rounded-[10px] capitalize text-[20px] px-[40px] py-[20px]">Add To Cart</button>
-            <button className="border rounded-[10px] text-[20px] px-[40px] py-[20px]">+ Compare</button>
+            <button className="border1 rounded-[10px] capitalize text-[20px] px-[40px] py-[20px]">Add To Cart</button>
+            <button className="border1 rounded-[10px] text-[20px] px-[40px] py-[20px]">+ Compare</button>
           </div>
           <div className="w-full h-[1px] bg-[#D9D9D9] mt-[60px]"></div>
-          <pre className="text-[#9F9F9F]">SKU       : {data?.sku}</pre>
-          <pre className="text-[#9F9F9F]">Category  : {data?.category}</pre>
-          <pre className="text-[#9F9F9F]">Tags      : {data?.tags?.join(', ')}</pre>
+          <pre className="text-[#9F9F9F] hover:text-black duration-300">SKU       : {data?.sku}</pre>
+          <pre className="text-[#9F9F9F] hover:text-black duration-300">Category  : {data?.category}</pre>
+          <pre className="text-[#9F9F9F] hover:text-black duration-300">Tags      : {data?.tags?.join(', ')}</pre>
           <div className="flex items-center gap-[12px] max-[1150px]:justify-center">
-            <pre className="text-[#9F9F9F]">Share     :</pre>
+            <pre className="text-[#9F9F9F] hover:text-black duration-300">Share     :</pre>
             <div className="flex gap-[23px] items-center">
               <img src={img2} alt="" />
               <img src={img3} alt="" />
@@ -99,7 +99,26 @@ const DetailProduct = () => {
           </div>
         </div>
       </section>
-      <div className="w-full h-[1px] bg-[#D9D9D9]"></div>
+      <div className="w-full h-[1px] bg-[#D9D9D9] mt-[50px]"></div>
+      <section className="container pt-[50px]">
+        <div className="flex gap-[50px] justify-center max-[650px]:flex-wrap">
+          <p className="text-[24px] text-[#9F9F9F] hover:text-black duration-300 hover:cursor-pointer">Descripton</p>
+          <p className="text-[24px] text-[#9F9F9F] hover:text-black duration-300 hover:cursor-pointer">Additional Information</p>
+          <p className="text-[24px] text-[#9F9F9F] hover:text-black duration-300 hover:cursor-pointer">Reviews [{data?.stock}]</p>
+        </div>
+        <div className="container2 mt-[30px]">
+          <p className="text-[#9F9F9F]">{data?.description}</p>
+          <p className="text-[#9F9F9F] mt-[20px]">Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.</p>
+        </div>
+        <div className="flex gap-[30px] justify-around">
+          <div>
+            <img src={data?.images} alt="" width={400}/>
+          </div>
+          <div>
+            <img src={data?.images} alt="" width={400}/>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

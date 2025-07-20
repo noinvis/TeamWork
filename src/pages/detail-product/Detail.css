@@ -28,3 +28,14 @@ li.active{
 button:hover{
     cursor: pointer;
 }
+.container2{
+    max-width: 1060px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+pre:hover{
+    cursor: pointer;
+}
