@@ -23,7 +23,7 @@ const DetailProduct = () => {
   }
 
   return loading ? (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center h-screen">
       <div className="loader"></div>
     </div>
   ) : (
