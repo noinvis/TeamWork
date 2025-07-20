@@ -89,18 +89,18 @@ const DetailProduct = () => {
             <div className="size-[40px] rounded-[50%] bg-black color"></div>
             <div className="size-[40px] rounded-[50%] bg-[#B88E2F] color"></div>
           </div>
-          <div className="flex gap-[1rem] mt-[20px] max-[1150px]:justify-center max-[565px]:flex-wrap">
-            <div className="border1 flex gap-[35px] rounded-[10px] py-[18px] px-[10px]">
-              <button onClick={() => setNum((p) => (p > 1 ? p - 1 : 1))}>
+          <div className="flex gap-[1rem] mt-[20px] max-[1150px]:justify-center max-[560px]:flex-wrap">
+            <div className="border1 flex gap-[35px] items-center rounded-[10px] py-[18px] px-[10px] max-[560px]:w-full max-[560px]:justify-center">
+              <button onClick={() => setNum((p) => (p > 1 ? p - 1 : 1))} className="text-[20px] max-[560px]:text-[30px]">
                 -
               </button>
               <p className="text-[18px] font-medium">{num}</p>
-              <button onClick={() => setNum((p) => p + 1)}>+</button>
+              <button onClick={() => setNum((p) => p + 1)} className="max-[560px]:text-[30px] text-[20px]">+</button>
             </div>
-            <button className="border1 rounded-[10px] capitalize text-[20px] px-[40px] py-[20px]">
+            <button className="border1 rounded-[10px] capitalize text-[20px] px-[40px] py-[20px] max-[560px]:w-full">
               Add To Cart
             </button>
-            <button className="border1 rounded-[10px] text-[20px] px-[40px] py-[20px]">
+            <button className="border1 rounded-[10px] text-[20px] px-[40px] py-[20px] max-[560px]:w-full">
               + Compare
             </button>
           </div>
