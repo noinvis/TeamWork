@@ -1,3 +1,4 @@
+import React from "react";
 import Hero from "../../components/hero/Hero";
 import HomeType from "../../components/home-type/HomeType";
 import Products from "../../components/products/Products";

@@ -42,7 +42,7 @@ const Products = () => {
                   <button className="bg-[#fff] block mx-auto mt-[180px] py-[12px] px-[52px] text-[16px] font-semibold text-[#B88E2F] shadow-lg">
                     Add to cart
                   </button>
-                  <div className="flex items-center justify-center gap-[20px] mt-[24px] font-semibold">
+                  <div className="flex items-center justify-center gap-[12px] mt-[24px] font-semibold">
                     <div className="flex items-center gap-[2px]">
                       <FiShare2 className="text-[#fff]" />
                       <p className="text-[#fff]">Share</p>
