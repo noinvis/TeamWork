@@ -47,3 +47,8 @@ pre:hover{
     border: 2px solid white;
     cursor: pointer;
 }
+@keyframes l3 {
+  to {
+    transform: rotate(1turn);
+  }
+}
