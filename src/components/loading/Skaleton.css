@@ -1,0 +1,10 @@
+.load{
+    background: linear-gradient(90deg, #ccc, #ddd, #ccc);
+     background-size: 200%;
+    animation: animation 1s linear  infinite  ;
+}
+@keyframes animation {
+    to{
+        background-position: 200%;
+    }
+}
