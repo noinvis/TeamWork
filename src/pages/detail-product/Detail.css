@@ -52,3 +52,6 @@ pre:hover{
     transform: rotate(1turn);
   }
 }
+.border2{
+    border: 1px solid #B88E2F;    
+}

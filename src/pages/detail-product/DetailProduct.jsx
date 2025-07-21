@@ -1,18 +1,22 @@
 import React from "react";
 import { memo, useLayoutEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import "./Detail.css";
 import img from "./images/Group 88.png";
 import img2 from "./images/facebook.png";
 import img3 from "./images/in.png";
 import img4 from "./images/twitter.png";
+import img5 from "./images/kreslo.png"
+import img6 from "./images/kreslo2.png"
+import ExtraProduct from "./extra-product/ExtraProduct";
 
 const DetailProduct = () => {
   const { id } = useParams();
   const [imageIndex, setImageIndex] = useState(0);
   const { data, error, loading } = useFetch(`/products/${id}`);
   const [num, setNum] = useState(1);
+  const navigate = useNavigate()
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
@@ -152,15 +156,26 @@ const DetailProduct = () => {
             enables easy and stylish travel.
           </p>
         </div>
-        <div className="flex gap-[30px] justify-around mt-[30px]">
+        <div className="container flex gap-[30px] justify-between mt-[30px] max-[560px]:flex-wrap max-[560px]:justify-center">
           <div>
-            <img src={data?.images[0]} alt="" width={400} />
+            <img src={img5} alt="" width={400} />
           </div>
           <div>
-            <img src={data?.images[0]} alt="" width={400} />
+            <img src={img6} alt="" width={400} />
           </div>
         </div>
       </section>
+      <div className="w-full h-[1px] bg-[#D9D9D9] mt-[50px]"></div>
+      <section className="container py-[55px]">
+        <p className="text-center text-[36px] font-medium">Related Products</p>
+        <div className="grid grid-cols-4 gap-[32px] py-[24px]">
+            <ExtraProduct/>
+        </div>
+        <div className="flex justify-center">
+          <button className="border2 text-[#B88E2F] hover:text-white hover:bg-[#B88E2F] duration-300 py-[12px] px-[74px]" onClick={() => navigate("/")}>Go Back</button>
+        </div>
+      </section>
+      <div className="w-full h-[1px] bg-[#D9D9D9] mb-[30px]"></div>
     </>
   );
 };
