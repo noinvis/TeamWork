@@ -168,7 +168,7 @@ const DetailProduct = () => {
       <div className="w-full h-[1px] bg-[#D9D9D9] mt-[50px]"></div>
       <section className="container py-[55px]">
         <p className="text-center text-[36px] font-medium">Related Products</p>
-        <div className="grid grid-cols-4 gap-[32px] py-[24px]">
+        <div className="grid grid-cols-4 gap-[32px] py-[24px] max-[1060px]:grid-cols-3 max-[850px]:grid-cols-2 max-[600px]:grid-cols-1">
             <ExtraProduct/>
         </div>
         <div className="flex justify-center">

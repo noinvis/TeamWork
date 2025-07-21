@@ -22,7 +22,7 @@ const ExtraProduct = () => {
         {
             data?.products?.map(item => (
                 <div key={item.id} className="shadow-lg my-[24px]">
-                    <div className="h-[300px] bg-contain">
+                    <div className="h-[300px] bg-contain flex justify-center">
                         <img src={item.thumbnail} alt={item.title} />
                     </div>
                     <div className="bg-[#F4F5F7] p-[20px]">
