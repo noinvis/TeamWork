@@ -7,13 +7,13 @@ import cartIcon from "./img/cart.png";
 
 const Header = () => {
   return (
-    <header className="max-w-[1440px] w-full mx-auto bg-white shadow-sm ">
-      <div className="max-w-[1440px] w-full mx-auto flex items-center justify-between px-8 py-4">
+    <header className="max-w-[1440px] w-full mx-auto bg-white shadow-sm">
+      <div className="w-full flex flex-col md:flex-row items-center justify-between px-4 md:px-8 py-4 gap-4 md:gap-0">
         <div className="flex items-center space-x-2">
           <img src={logo} alt="Logo" className="h-8 w-auto" />
         </div>
 
-        <nav className="hidden md:flex space-x-8 font-medium text-gray-800">
+        <nav className="hidden md:flex space-x-6 text-sm lg:text-base font-medium text-gray-800">
           <a href="#" className="hover:text-yellow-600">
             Home
           </a>
@@ -28,27 +28,15 @@ const Header = () => {
           </a>
         </nav>
 
-        <div className="flex items-center space-x-6">
-          <img
-            src={userIcon}
-            alt="User"
-            className="w-5 h-5 cursor-pointer hover:scale-110 transition"
-          />
-          <img
-            src={searchIcon}
-            alt="Search"
-            className="w-5 h-5 cursor-pointer hover:scale-110 transition"
-          />
-          <img
-            src={heartIcon}
-            alt="Wishlist"
-            className="w-5 h-5 cursor-pointer hover:scale-110 transition"
-          />
-          <img
-            src={cartIcon}
-            alt="Cart"
-            className="w-5 h-5 cursor-pointer hover:scale-110 transition"
-          />
+        <div className="flex items-center space-x-4">
+          {[userIcon, searchIcon, heartIcon, cartIcon].map((icon, idx) => (
+            <img
+              key={idx}
+              src={icon}
+              className="w-5 h-5 md:w-6 md:h-6 cursor-pointer hover:scale-110 transition"
+              alt="icon"
+            />
+          ))}
         </div>
       </div>
     </header>
