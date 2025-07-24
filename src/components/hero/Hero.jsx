@@ -4,10 +4,10 @@ import bgImage from "./img/hero-bg.png";
 const Hero = () => {
   return (
     <section
-      className="max-w-[1440px] w-full mx-auto bg-cover bg-center min-h-[550px] flex items-center justify-center"
+      className="w-full mx-auto bg-cover bg-center min-h-[550px] flex items-center justify-center"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      <div className="w-full px-4">
+      <div className="max-w-[1440px] w-full px-4">
         <div className="bg-white bg-opacity-90 p-6 md:p-8 rounded-xl max-w-xl mx-auto md:ml-auto shadow-lg mr-4 md:mr-[100px]">
           <p className="text-sm tracking-wide text-[#333] font-semibold mb-2">
             New Arrival
