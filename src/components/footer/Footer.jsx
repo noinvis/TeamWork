@@ -2,11 +2,11 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-white px-6 py-12">
-      <div className="w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-white px-4 md:px-6 py-12">
+      <div className="max-w-[1300px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         <div>
-          <h2 className="text-xl font-bold mb-4 text-[#000] text-[24px]">Funiro.</h2>
-          <p className="text-gray-500 mt-[80px]">
+          <h2 className="text-xl font-bold mb-4 text-[#000]">Funiro.</h2>
+          <p className="text-gray-500 mt-6 md:mt-[80px] text-sm">
             400 University Drive Suite 200 Coral Gables,
             <br />
             FL 33134 USA
@@ -14,8 +14,8 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="text-gray-500 mb-2">Links</h3>
-          <ul className="space-y-9 mt-6">
+          <h3 className="text-gray-500 mb-2 text-sm">Links</h3>
+          <ul className="space-y-6 mt-4 text-sm">
             <li>
               <a href="#" className="font-medium hover:underline">
                 Home
@@ -40,8 +40,8 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="text-gray-500 mb-2">Help</h3>
-          <ul className="space-y-9 mt-6">
+          <h3 className="text-gray-500 mb-2 text-sm">Help</h3>
+          <ul className="space-y-6 mt-4 text-sm">
             <li>
               <a href="#" className="font-medium hover:underline">
                 Payment Options
@@ -61,19 +61,21 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="text-gray-500 mb-2">Newsletter</h3>
-          <div className="flex border-b border-gray-400">
+          <h3 className="text-gray-500 mb-2 text-sm">Newsletter</h3>
+          <div className="flex border-b border-gray-400 mt-4">
             <input
               type="email"
               placeholder="Enter Your Email Address"
-              className="flex-1 outline-none py-1 text-sm text-[#9f9f9f] placeholder-gray-400 bg-transparent"
+              className="flex-1 outline-none py-1 text-sm text-[#9f9f9f] bg-transparent"
             />
-            <button className="text-sm font-semibold ml-2 text-[#000]">SUBSCRIBE</button>
+            <button className="text-sm font-semibold ml-2 text-[#000]">
+              SUBSCRIBE
+            </button>
           </div>
         </div>
       </div>
 
-      <div className="w-[1300px] mx-auto mt-10 pt-4 text-sm text-[#000]">
+      <div className="max-w-[1300px] mx-auto mt-10 pt-4 text-sm text-center text-[#000]">
         2023 funiro. All rights reserved
       </div>
     </footer>
