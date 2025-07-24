@@ -7,7 +7,7 @@ import cartIcon from "./img/cart.png";
 
 const Header = () => {
   return (
-    <header className="max-w-[1440px] w-full mx-auto bg-white shadow-sm">
+    <header className="max-w-[1440px] w-full mx-auto bg-white">
       <div className="w-full flex flex-col md:flex-row items-center justify-between px-4 md:px-8 py-4 gap-4 md:gap-0">
         <div className="flex items-center space-x-2">
           <img src={logo} alt="Logo" className="h-8 w-auto" />
