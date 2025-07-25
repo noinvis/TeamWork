@@ -17,8 +17,8 @@ const App = () => {
           <Route path="/wishlist" element={<Wishlist/>}/>
           <Route path="/cart" element={<Cart/>}/>
           <Route path="/contact" element={<Contact/>}/>
-          <Route path="*" element={<NotFound />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
