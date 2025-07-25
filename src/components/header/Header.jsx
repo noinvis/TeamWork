@@ -1,80 +1,89 @@
 import React, { useState } from "react";
 import logo from "./img/Frame 168.png";
-import { Link, NavLink, useNavigate } from "react-router-dom";
-import { IoCartOutline, IoClose, IoHeartOutline, IoHomeOutline, IoMenu, IoSearchOutline } from "react-icons/io5";
-import { FaRegUser } from "react-icons/fa";
+import { NavLink, useNavigate } from "react-router-dom";
+import {
+  IoCartOutline,
+  IoClose,
+  IoHomeOutline,
+  IoMenu,
+} from "react-icons/io5";
+import { FiHeart, FiSearch} from "react-icons/fi";
+import { CiUser } from "react-icons/ci";
+
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
-    <header className="max-w-[1440px] w-full mx-auto bg-white">
-      <div className="w-full flex md:flex-row items-center justify-between px-4 md:px-8 py-4 gap-4 md:gap-0">
+    <header className="container w-full mx-auto z-30 sticky top-0 left-0 bg-white">
+      <nav className="flex md:flex-row items-center justify-between py-4 gap-4 md:gap-0">
         <div className="flex items-center space-x-2">
-          <img src={logo} alt="Logo" className="h-8 w-auto" onClick={() => navigate("/")}/>
+          <img
+            src={logo}
+            alt="Logo"
+            className="h-8 w-auto"
+            onClick={() => navigate("/")}
+          />
+        </div>
+          <ul
+            className={`flex gap-[24px] top-full left-0 max-md:absolute max-md:bg-white max-md:w-full max-md:flex-col max-md:gap-2 max-md:overflow-hidden max-md:border-b max-md:border-gray-200 duration-300 
+              ${toggle ? "max-md:py-[20px] max-md:px-[30px]" : "max-md:h-0 max-md:px-[30px]"}`}>
+            <li className="hover:text-[#B88E2F] duration-300 max-md:mb-[1rem]">
+              <NavLink to={"/"} className='link'>Home</NavLink>
+            </li>
+            <li className="hover:text-[#B88E2F] duration-300 max-md:mb-[1rem]">
+              <NavLink to={"/about"} className='link'>About</NavLink>
+            </li>
+            <li className="hover:text-[#B88E2F] duration-300 max-md:mb-[1rem]">
+              <NavLink to={"/contact"} className='link'>Contact</NavLink>
+            </li>
+            <li className="hover:text-[#B88E2F] duration-300 max-md:mb-[1rem]">
+              <NavLink to={"/shop"} className='link'>Shop</NavLink>
+            </li>
+          </ul>
+
+        <div className="flex gap-3 max-md:fixed max-md:bottom-0 max-md:left-0 max-md:w-full max-md:justify-evenly max-md:bg-white max-md:py-4 max-md:border-t max-md:border-gray-300 z-30">
+          <NavLink
+            className={({ isActive }) => `${isActive ? "bg-[#B88E2F] duration-300 text-white rounded-[10px] drop-shadow-amber-600" : ""} py-[5px] px-[10px] text-[20px]`}
+            to={"/search"}
+          >
+            <FiSearch />
+          </NavLink>
+          <NavLink
+            className={({ isActive }) => `${isActive ? "bg-[#B88E2F] duration-300 text-white rounded-[10px] drop-shadow-amber-600" : ""} py-[5px] px-[10px] text-[20px]`}
+            to={"/wishlist"}
+          >
+            <FiHeart />
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              `md:hidden ${isActive ? "bg-[#B88E2F] duration-300 text-white rounded-[10px] drop-shadow-amber-600" : ""} py-[5px] px-[10px] text-[20px]`
+            }
+            to={"/"}
+          >
+            <IoHomeOutline />
+          </NavLink>
+          <NavLink
+            className={({ isActive }) => `${isActive ? "bg-[#B88E2F] duration-300 text-white rounded-[10px] drop-shadow-amber-600" : ""} py-[5px] px-[10px] text-[20px]`}
+            to={"/cart"}
+          >
+            <IoCartOutline />
+          </NavLink>
+          <NavLink
+            className={({ isActive }) => `${isActive ? "bg-[#B88E2F] duration-300 text-white rounded-[10px] drop-shadow-amber-600" : ""} py-[5px] px-[10px] text-[20px]`}
+            to={"/profile"}
+          >
+            <CiUser />
+          </NavLink>
         </div>
 
-        <ul
-          className={`flex gap-4 e top-full left-0 max-sm:absolute max-sm:bg-white max-sm:w-full max-sm:flex-col max-sm:gap-2  max-sm:overflow-hidden max-sm:border-b max-sm:border-gray-200 duration-200 ${
-            toggle ? "max-sm:h-[110px]" : "max-sm:h-0"
-          }`}
+        <button
+          className="text-2xl md:hidden"
+          onClick={() => setToggle((p) => !p)}
         >
-          <li className="max-sm:px-3 ">
-            <Link to={"/"}>Home</Link>
-          </li>
-          <li className="max-sm:px-3 ">
-            <Link to={"/about"}>About</Link>
-          </li>
-          <li className="max-sm:px-3 ">
-            <Link to={"/contact"}>Contact</Link>
-          </li>
-          <li className="max-sm:px-3 ">
-            <Link to={"/shop"}>Shop</Link>
-          </li>
-        </ul>
-
-        <div className="flex gap-3 max-sm:fixed max-sm:bottom-0 max-sm:left-0 max-sm:w-full max-sm:justify-evenly max-sm:bg-white max-sm:py-4 max-sm:border-t max-sm:border-gray-300">
-                  <NavLink
-                    className={({ isActive }) =>
-                      `sm:hidden ${isActive ? "text-red-500" : ""}`
-                    }
-                    to={"/"}
-                  >
-                    <IoHomeOutline />
-                  </NavLink>
-                  <NavLink
-                    className={({ isActive }) => `${isActive ? "text-red-500" : ""}`}
-                    to={"/search"}
-                  >
-                    <IoSearchOutline />
-                  </NavLink>
-                  <NavLink
-                    className={({ isActive }) => `${isActive ? "text-red-500" : ""}`}
-                    to={"/wishlist"}
-                  >
-                    <IoHeartOutline />
-                  </NavLink>
-                  <NavLink
-                    className={({ isActive }) => `${isActive ? "text-red-500" : ""}`}
-                    to={"/cart"}
-                  >
-                    <IoCartOutline />
-                  </NavLink>
-                  <NavLink
-                    className={({ isActive }) => `${isActive ? "text-red-500" : ""}`}
-                    to={"/profile"}
-                  >
-                    <FaRegUser />
-                  </NavLink>
-                </div>
-        
-                <button
-                  className="text-2xl sm:hidden"
-                  onClick={() => setToggle((p) => !p)}
-                >
-                  {toggle ? <IoClose /> : <IoMenu />}
-                </button>
-      </div>
+          {toggle ? <IoClose /> : <IoMenu />}
+        </button>
+      </nav>
     </header>
   );
 };
