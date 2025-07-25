@@ -62,13 +62,13 @@ const Footer = () => {
 
         <div>
           <h3 className="text-gray-500 mb-2 text-sm">Newsletter</h3>
-          <div className="flex border-b border-gray-400 mt-4">
+          <div className="flex border-b border-gray-400 mt-4 justify-between">
             <input
               type="email"
-              placeholder="Enter Your Email Address"
-              className="flex-1 outline-none py-1 text-sm text-[#9f9f9f] bg-transparent"
+              placeholder="Email Address"
+              className="outline-none py-1 text-sm text-[#9f9f9f]"
             />
-            <button className="text-sm font-semibold ml-2 text-[#000]">
+            <button className="text-sm font-semibold max-[1070px]:hidden max-[760px]:block">
               SUBSCRIBE
             </button>
           </div>
@@ -76,7 +76,7 @@ const Footer = () => {
       </div>
 
       <div className="max-w-[1300px] mx-auto mt-10 pt-4 text-sm text-center text-[#000]">
-        2023 funiro. All rights reserved
+        2023 furniro. All rights reserved
       </div>
     </footer>
   );

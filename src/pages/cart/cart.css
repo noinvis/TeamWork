@@ -5,3 +5,12 @@
 *{
     font-family: "Poppins", sans-serif;
 }
+.link{
+    padding: 5px 10px;
+    transition: .3s ease-out;
+}
+.link.active{
+    background: #B88E2F;
+    color: white;
+    border-radius: 10px;
+}

@@ -6,9 +6,11 @@ import { FcLike } from "react-icons/fc";
 import { PiHeart } from "react-icons/pi";
 import { useStore } from "../../zustand/useStore";
 import { RiShoppingCartLine } from "react-icons/ri";
+import { useCart } from "../../zustand/useCart";
 
 const Products = ({ data, error, loading, title }) => {
   const { toggleWishlist, wishlist } = useStore();
+  const {add} = useCart()
 
   const navigate = useNavigate();
 
@@ -59,7 +61,7 @@ const Products = ({ data, error, loading, title }) => {
                     )}
                   </button>
 
-                  <button className="p-[8px] rounded-[50%] bg-[dodgerblue]">
+                  <button className="p-[8px] rounded-[50%] bg-[dodgerblue]" onClick={()=> add(item)}>
                     <RiShoppingCartLine className="text-[24px] text-[#fff] max-[700px]:text-[18px]" />
                   </button>
                 </div>
