@@ -7,9 +7,9 @@ const Wishlist = () => {
 
   if (wishlist.length == 0) {
     return (
-      <section className="mb-[120px]">
+      <section className="mb-[120px] mt-[70px]">
         <div className="container mx-auto">
-          <div className="mx-auto w-[50%] max-[1000px]:w-[80%]">
+          <div className="mx-auto w-[50%] max-[1000px]:w-[80%] max-[600px]:w-[100%] ">
             <img src={product} alt="" />
           </div>
           <div className="mx-auto">
@@ -20,7 +20,7 @@ const Wishlist = () => {
               Please choose your liked product
             </p>
           </div>
-        </div>
+        </div> 
       </section>
     );
   } else {
