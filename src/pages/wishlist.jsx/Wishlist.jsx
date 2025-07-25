@@ -1,15 +1,37 @@
-import React from 'react'
-import {useStore} from "../../zustand/useStore"
+import React from "react";
+import { useStore } from "../../zustand/useStore";
+import Products from "../../components/products/Products";
+import product from "../../assets/p.webp";
 const Wishlist = () => {
-  const { wishlist } = useStore()
-  
-  return (
-    <section>
-      <div className='container mx-auto '>
+  const { wishlist } = useStore();
 
-      </div>
-  </section>
-  )
-}
+  if (wishlist.length == 0) {
+    return (
+      <section className="mb-[120px]">
+        <div className="container mx-auto">
+          <div className="mx-auto w-[50%] max-[1000px]:w-[80%]">
+            <img src={product} alt="" />
+          </div>
+          <div className="mx-auto">
+            <h2 className="text-center text-[#b88e2f] mt-[20px] text-[30px] ">
+              Your have not current favorite product
+            </h2>
+            <p className="text-center text-[#965505] font-medium">
+              Please choose your liked product
+            </p>
+          </div>
+        </div>
+      </section>
+    );
+  } else {
+    return (
+      <section>
+        <div className="container mx-auto mb-[80px]">
+          <Products data={wishlist} title={"Wishlist"} />
+        </div>
+      </section>
+    );
+  }
+};
 
-export default Wishlist
+export default React.memo(Wishlist);

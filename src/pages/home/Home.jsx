@@ -10,7 +10,12 @@ const Home = () => {
     <div>
       <Hero />
       <HomeType />
-      <Products data={data?.products} error={error} loading={loading} />
+      <Products
+        data={data?.products}
+        error={error}
+        loading={loading}
+        title={"Our products"}
+      />
     </div>
   );
 };
