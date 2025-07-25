@@ -168,11 +168,11 @@ const DetailProduct = () => {
       <div className="w-full h-[1px] bg-[#D9D9D9] mt-[50px]"></div>
       <section className="container py-[55px]">
         <p className="text-center text-[36px] font-medium">Related Products</p>
-        <div className="grid grid-cols-4 gap-[32px] py-[24px] max-[1060px]:grid-cols-3 max-[850px]:grid-cols-2 max-[600px]:grid-cols-1">
-            <ExtraProduct/>
+        <div>
+          <ExtraProduct/>
         </div>
-        <div className="flex justify-center">
-          <button className="border2 text-[#B88E2F] hover:text-white hover:bg-[#B88E2F] duration-300 py-[12px] px-[74px]" onClick={() => navigate("/")}>Go Back</button>
+        <div className="flex justify-center mt-[30px]">
+          <button className="border2 text-[#B88E2F] hover:text-white hover:bg-[#B88E2F] duration-300 py-[12px] px-[74px]" onClick={() => navigate(-1)}>Go Back</button>
         </div>
       </section>
       <div className="w-full h-[1px] bg-[#D9D9D9] mb-[30px]"></div>

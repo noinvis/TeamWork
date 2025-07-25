@@ -44,7 +44,7 @@ const Products = ({ data, error, loading, title }) => {
 
               <div className="bg-[#fefefe] p-[10px] relative">
                 <img
-                  onClick={() => navigate(`product/${item.id}`)}
+                  onClick={() => navigate(`/product/${item.id}`)}
                   className="transition hover:scale-[1.02]"
                   src={item.thumbnail}
                   alt=""
