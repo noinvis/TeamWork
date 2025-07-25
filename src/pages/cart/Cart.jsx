@@ -29,7 +29,7 @@ const Cart = () => {
   }
   return (
     <>
-      <CartProps />
+      <CartProps title={"Cart"}/>
       <section className="flex container gap-[30px] mt-[70px] max-[1050px]:grid max-[1050px]:grid-cols-1">
         <div className="w-full">
           <div className="flex bg-[#F9F1E7] h-[55px] justify-between items-center px-[100px] max-[650px]:px-[10px]">
