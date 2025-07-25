@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import img from "../img/Rectangle 1.png";
 import logo from '../img/logo.png'
 import { useNavigate } from "react-router-dom";
@@ -20,4 +20,4 @@ const CartProps = () => {
   )
 }
 
-export default CartProps
+export default memo(CartProps)

@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import React, { memo, useLayoutEffect } from "react";
 import "./cart.css";
 import CartProps from "./cart-props/CartProps";
 import { useNavigate } from "react-router-dom";
@@ -102,4 +102,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default memo(Cart);

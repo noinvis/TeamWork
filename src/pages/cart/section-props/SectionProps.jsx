@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { ONES } from '../static'
 
 const SectionProps = () => {
@@ -21,4 +21,4 @@ const SectionProps = () => {
   )
 }
 
-export default SectionProps
+export default memo(SectionProps)
