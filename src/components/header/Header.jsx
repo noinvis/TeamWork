@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import logo from "./img/Frame 168.png";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { IoCartOutline, IoClose, IoHeartOutline, IoHomeOutline, IoMenu, IoSearchOutline } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
+  const navigate = useNavigate()
   return (
     <header className="max-w-[1440px] w-full mx-auto bg-white">
-      <div className="w-full flex flex-col md:flex-row items-center justify-between px-4 md:px-8 py-4 gap-4 md:gap-0">
+      <div className="w-full flex md:flex-row items-center justify-between px-4 md:px-8 py-4 gap-4 md:gap-0">
         <div className="flex items-center space-x-2">
-          <img src={logo} alt="Logo" className="h-8 w-auto" />
+          <img src={logo} alt="Logo" className="h-8 w-auto" onClick={() => navigate("/")}/>
         </div>
 
         <ul

@@ -8,7 +8,12 @@ const Cart = () => {
       <CartProps/>
       <section className="flex container gap-[30px] mt-[70px]">
         <div className="w-full">
-          <div className="flex bg-[#F9F1E7] h-[55px]"></div>
+          <div className="flex bg-[#F9F1E7] h-[55px] justify-evenly items-center">
+            <p className="font-medium">Product</p>
+            <p className="font-medium">Price</p>
+            <p className="font-medium">Quantity</p>
+            <p className="font-medium">Subtotal</p>
+          </div>
           <div></div>
         </div>
         <div className="bg-[#F9F1E7] pb-[80px] w-[400px] flex flex-col items-center">
