@@ -75,7 +75,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="max-w-[1300px] mx-auto mt-10 pt-4 text-sm text-center text-[#000]">
+      <div className="max-w-[1300px] max-md:mb-[100px] mx-auto mt-10 pt-4 text-sm text-center text-[#000]">
         2023 furniro. All rights reserved
       </div>
     </footer>
