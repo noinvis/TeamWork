@@ -46,7 +46,7 @@ const Cart = () => {
                 className="mt-[55px] flex items-center justify-between px-[10px] max-[550px]:px-0"
               >
                 <div className="flex items-center gap-[1rem]">
-                  <div className="size-[100px] bg-[#F9F1E7] rounded-[10px] p-[10px]">
+                  <div className="size-[100px] bg-[#F9F1E7] rounded-[10px] p-[10px]" onClick={() => navigate(`/product/${product.id}`)}>
                     <img src={product.thumbnail} />
                   </div>
                   <p className="text-[#9F9F9F] w-[200px] max-[730px]:w-auto max-[550px]:hidden">{product.title}</p>
