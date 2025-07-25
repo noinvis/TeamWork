@@ -13,7 +13,7 @@ const CartProps = ({title}) => {
         <div className="flex gap-[6px] items-center">
           <p className="font-medium hover:cursor-pointer" onClick={() => navigate("/")}>Home</p>
           <div className="text-[20px]">&#8250;</div>
-          <p className="font-light hover:cursor-pointer">Cart</p>
+          <p className="font-light hover:cursor-pointer">{title}</p>
         </div>
       </div>
     </section>
