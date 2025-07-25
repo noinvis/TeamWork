@@ -4,7 +4,7 @@ import img from '../detail-product/images/Group.png'
 const NotFound = () => {
   const navigate = useNavigate()
   return (
-    <div className='h-screen w-full flex justify-center items-center flex-col gap-[2rem]'>
+    <div className='h-[70vh] w-full flex justify-center items-center flex-col gap-[2rem]'>
       <h1 className='text-[50px]'>Oops!</h1>
       <p className='text-[24px]'>You are lost</p>
       <img src={img} alt="" className='p'/>
