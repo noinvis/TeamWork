@@ -2,6 +2,8 @@ import React from "react";
 import { useStore } from "../../zustand/useStore";
 import Products from "../../components/products/Products";
 import product from "../../assets/p.webp";
+import CartProps from "../cart/cart-props/CartProps";
+import SectionProps from "../cart/section-props/SectionProps";
 const Wishlist = () => {
   const { wishlist } = useStore();
 
@@ -26,9 +28,11 @@ const Wishlist = () => {
   } else {
     return (
       <section>
+        <CartProps title={"Wishlist"}/>
         <div className="container mx-auto mb-[80px]">
           <Products data={wishlist} title={"Wishlist"} />
         </div>
+        <SectionProps />
       </section>
     );
   }
