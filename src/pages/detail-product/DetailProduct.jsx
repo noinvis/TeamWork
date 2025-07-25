@@ -14,7 +14,7 @@ import ExtraProduct from "./extra-product/ExtraProduct";
 const DetailProduct = () => {
   const { id } = useParams();
   const [imageIndex, setImageIndex] = useState(0);
-  const { data, error, loading } = useFetch(`/products/${id}`);
+  const { data, error, loading } = useFetch(`/product/${id}`);
   const [num, setNum] = useState(1);
   const navigate = useNavigate()
 
