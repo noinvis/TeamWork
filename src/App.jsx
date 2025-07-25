@@ -5,6 +5,7 @@ import Layout from "./pages/layout/Layout";
 import DetailProduct from "./pages/detail-product/DetailProduct";
 import Wishlist from "./pages/wishlist.jsx/Wishlist";
 import Cart from "./pages/cart/Cart";
+import Contact from "./pages/contact/Contact";
 
 const App = () => {
   return (
@@ -15,7 +16,7 @@ const App = () => {
           <Route path="/product/:id" element={<DetailProduct />} />
           <Route path="/wishlist" element={<Wishlist/>}/>
           <Route path="/cart" element={<Cart/>}/>
-          <Route path="/contact" element={<Cart/>}/>
+          <Route path="/contact" element={<Contact/>}/>
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
