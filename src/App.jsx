@@ -4,6 +4,7 @@ import NotFound from "./pages/not-found/NotFound";
 import Layout from "./pages/layout/Layout";
 import DetailProduct from "./pages/detail-product/DetailProduct";
 import Wishlist from "./pages/wishlist.jsx/Wishlist";
+import Cart from "./pages/cart/Cart";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
           <Route index={true} element={<Home />} />
           <Route path="/product/:id" element={<DetailProduct />} />
           <Route path="/wishlist" element={<Wishlist/>}/>
+          <Route path="/cart" element={<Cart/>}/>
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
