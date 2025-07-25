@@ -1,6 +1,6 @@
 import React from "react";
 import './cart.css'
-import CartProps from "./Cart-props/CartProps";
+import CartProps from "./cart-props/CartProps";
 
 const Cart = () => {
   return (
