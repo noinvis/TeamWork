@@ -1,15 +1,16 @@
-import React, { memo } from "react";
+import React, { memo, useState } from "react";
 
-import { useFetch } from "../../hooks/useFetch";
 import Skaleton from "../loading/Skaleton";
 import { useNavigate } from "react-router-dom";
-import { FiShare2 } from "react-icons/fi";
-import { MdCompareArrows } from "react-icons/md";
-import { FaRegHeart } from "react-icons/fa";
-const Products = () => {
+import { FcLike } from "react-icons/fc";
+import { PiHeart } from "react-icons/pi";
+import { useStore } from "../../zustand/useStore";
+
+const Products = ({ data, error, loading }) => {
+  const { toggleWishlist } = useStore();
+
+
   const navigate = useNavigate();
-  const { data, error, loading } = useFetch("/products", { limit: 8 });
-  console.log(data);
 
   if (error) {
     return (
@@ -28,39 +29,18 @@ const Products = () => {
           Our Products
         </h2>
         <div className="grid grid-cols-4 gap-[32px] max-[900px]:grid-cols-3 max-[900px]:gap-[14px] max-[620px]:grid-cols-2 max-[450px]:grid-cols-1">
-          {data?.products?.map((item) => (
+          {data?.map((item) => (
             <div
-              onClick={() => navigate(`product/${item.id}`)}
               key={item.id}
               className="group shadow-lg border border-[#f1eeee] overflow-hidden relative"
             >
-              <div className=" absolute duration-300 top-0 left-0 w-full opacity-0 h-screen bg-[#0000006d]  z-10 group-hover:opacity-[1] ">
-                <div className="absolute top-[-60px] z-20 -right-[60px] bg-[#E97171] rounded-[50%] w-[48px] h-[48px]  flex items-center duration-400 ease justify-center  group-hover:right-[20px] group-hover:top-[20px]">
-                  <p className="text-[#fff]">-{item.stock}%</p>
-                </div>
-                <div>
-                  <button className="bg-[#fff] block mx-auto mt-[180px] py-[12px] px-[52px] text-[16px] font-semibold text-[#B88E2F] shadow-lg">
-                    Add to cart
-                  </button>
-                  <div className="flex items-center justify-center gap-[12px] mt-[24px] font-semibold">
-                    <div className="flex items-center gap-[2px]">
-                      <FiShare2 className="text-[#fff]" />
-                      <p className="text-[#fff]">Share</p>
-                    </div>
-                    <div className="flex items-center gap-[2px]">
-                      <MdCompareArrows className="text-[#fff]" />
-                      <p className="text-[#fff]">Compare</p>
-                    </div>
-                    <div className="flex items-center gap-[2px]">
-                      <FaRegHeart className="text-[#fff]" />
-                      <p className="text-[#fff]">Like</p>
-                    </div>
-                  </div>
-                </div>
+              <div className="absolute top-[-60px] z-20 -right-[60px] bg-[#E97171] rounded-[50%] w-[48px] h-[48px]  flex items-center duration-400 ease justify-center  group-hover:right-[20px] group-hover:top-[20px]">
+                <p className="text-[#fff]">-{item.stock}%</p>
               </div>
 
               <div className="bg-[#fefefe] p-[10px] relative">
                 <img
+                  onClick={() => navigate(`product/${item.id}`)}
                   className="transition hover:scale-[1.02]"
                   src={item.thumbnail}
                   alt=""
@@ -74,7 +54,7 @@ const Products = () => {
                   {item.category}
                 </p>
                 <p className="text-[#3A3A3A] text-[20px] font-semibold mt-[8px]">
-                  {item.price} $
+                  {item.price} $<button onClick={() => toggleWishlist(item)} className="">like</button>
                 </p>
               </div>
             </div>

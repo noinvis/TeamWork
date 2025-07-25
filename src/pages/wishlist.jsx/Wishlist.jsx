@@ -1,8 +1,14 @@
 import React from 'react'
-
+import {useStore} from "../../zustand/useStore"
 const Wishlist = () => {
+  const { wishlist } = useStore()
+  
   return (
-    <div>Wishlist</div>
+    <section>
+      <div className='container mx-auto '>
+
+      </div>
+  </section>
   )
 }
 
