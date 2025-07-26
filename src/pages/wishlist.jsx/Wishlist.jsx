@@ -12,7 +12,7 @@ const Wishlist = () => {
       <section className="mb-[120px] mt-[70px]">
         <div className="container mx-auto">
           <div className="mx-auto w-[50%] max-[1000px]:w-[80%] max-[600px]:w-[100%] ">
-            <img className="block mx-auto" src={product} alt="" />
+            <img className="block mx-auto max-w-[250px]" src={product} alt="" />
           </div>
           <div className="mx-auto">
             <h2 className="text-center text-[#b88e2f] mt-[20px] text-[30px] ">
