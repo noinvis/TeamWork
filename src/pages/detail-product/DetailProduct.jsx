@@ -10,6 +10,7 @@ import img4 from "./images/twitter.png";
 import img5 from "./images/kreslo.png"
 import img6 from "./images/kreslo2.png"
 import ExtraProduct from "./extra-product/ExtraProduct";
+import { useCart } from "../../zustand/useCart";
 
 const DetailProduct = () => {
   const { id } = useParams();
@@ -17,6 +18,7 @@ const DetailProduct = () => {
   const { data, error, loading } = useFetch(`/product/${id}`);
   const [num, setNum] = useState(1);
   const navigate = useNavigate()
+  const {add} = useCart()
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
@@ -101,7 +103,7 @@ const DetailProduct = () => {
               <p className="text-[18px] font-medium">{num}</p>
               <button onClick={() => setNum((p) => p + 1)} className="max-[560px]:text-[30px] text-[20px]">+</button>
             </div>
-            <button className="border1 rounded-[10px] capitalize text-[20px] px-[40px] py-[20px] max-[560px]:w-full">
+            <button onClick={()=> add({...data})} className="border1 rounded-[10px] capitalize text-[20px] px-[40px] py-[20px] max-[560px]:w-full">
               Add To Cart
             </button>
             <button className="border1 rounded-[10px] text-[20px] px-[40px] py-[20px] max-[560px]:w-full">
