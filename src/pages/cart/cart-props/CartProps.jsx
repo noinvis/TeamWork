@@ -9,7 +9,7 @@ const CartProps = ({title}) => {
     <section className="w-full mx-auto bg-cover bg-center min-h-[320px] flex items-center justify-center" style={{ backgroundImage: `url(${img})` }}>
       <div className="flex flex-col justify-between items-center">
         <img src={logo}/>
-        <p className="font-medium text-[48px]">{title}</p>
+        <p className="font-medium text-[48px] text-center">{title}</p>
         <div className="flex gap-[6px] items-center">
           <p className="font-medium hover:cursor-pointer" onClick={() => navigate("/")}>Home</p>
           <div className="text-[20px]">&#8250;</div>

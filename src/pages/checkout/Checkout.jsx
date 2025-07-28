@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import CartProps from "../cart/cart-props/CartProps";
 import SectionProps from "../cart/section-props/SectionProps";
 import { useCart } from "../../zustand/useCart";
@@ -35,6 +35,10 @@ const Checkout = () => {
     text += `ZIP Code : <b>${data.code}</b> %0A`;
     text += `Phone Number : <b>${data.phone}</b> %0A`;
     text += `Email Address : <b>${data.email}</b> %0A%0A`;
+
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     cart.forEach((item) => {
       text += `Title: <b>${item.title}</b> %0A`;
