@@ -40,4 +40,10 @@ export const useCart = create((set) => ({
       saveStorage(store);
       return { cart: store };
     }),
+  clear: () =>
+  set(() => {
+    saveStorage([]);
+    return { cart: [] };
+  }),
+
 }));
