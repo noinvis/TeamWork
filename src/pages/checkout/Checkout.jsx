@@ -37,7 +37,6 @@ const Checkout = () => {
     text += `Email Address : <b>${data.email}</b> %0A%0A`;
 
     cart.forEach((item) => {
-      text += `<b>Want to Buy</b> %0A%0A`;
       text += `Title: <b>${item.title}</b> %0A`;
       text += `Quantity: <b>${item.quantity}</b> %0A`;
       text += `Price: <b>${item.price} $</b> %0A%0A`;
