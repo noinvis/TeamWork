@@ -33,7 +33,7 @@ const Header = () => {
                 <NavLink to={"/"} className='link'>Home</NavLink>
               </li>
               <li className="hover:text-[#B88E2F] duration-300 max-md:mb-[1rem]">
-                <NavLink to={"/about"} className='link'>About</NavLink>
+                <NavLink to={"/blog"} className='link'>Blog</NavLink>
               </li>
               <li className="hover:text-[#B88E2F] duration-300 max-md:mb-[1rem]">
                 <NavLink to={"/contact"} className='link'>Contact</NavLink>
