@@ -3,7 +3,6 @@ import CartProps from "../cart/cart-props/CartProps";
 import SectionProps from "../cart/section-props/SectionProps";
 import { useCart } from "../../zustand/useCart";
 import { Navigate } from "react-router-dom";
-import { api } from "../../api";
 import axios from "axios";
 
 const BOT_TOKEN = "8491754994:AAEAY63AAepcM30C8ODBZy7A01dENr1sbU8";
@@ -15,6 +14,10 @@ const CHAT_ID = "-4961623169";
 
 const Checkout = () => {
   const { cart, clear } = useCart();
+  const totalPrice = cart.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  );
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -66,9 +69,9 @@ const Checkout = () => {
       <CartProps title={"Checkout"} />
       <form
         onSubmit={handleSubmit}
-        className="container py-[63px] flex gap-[26px]"
+        className="container py-[63px] flex justify-between"
       >
-        <div className="w-[49%]">
+        <div className="w-[50%]">
           <p className="text-[36px] font-semibold">Billing details</p>
           <div className="flex gap-[30px] mt-[35px]">
             <div className="w-full">
@@ -163,12 +166,42 @@ const Checkout = () => {
             />
           </div>
         </div>
-        <div className="w-[50%]">
+        <div className="w-[45%]">
           <div className="flex justify-between">
             <p className="font-medium text-[24px]">Product</p>
             <p className="font-medium text-[24px]">Subtotal</p>
           </div>
-          <div className="flex justify-center">
+          {cart.map((item) => (
+            <div key={item.id} className="flex justify-between my-2">
+              <p className="text-[#9F9F9F] flex gap-2">
+                {item.title}
+                <span className="text-black">&#10006; {item.quantity}</span>
+              </p>
+              <p>Rs.{item.price * item.quantity}</p>
+            </div>
+          ))}
+          <div className="flex justify-between my-2 items-center">
+            <p className="">Total</p>
+            <p className="text-[#B88E2F] font-bold text-[24px]">Rs.{totalPrice}</p>
+          </div>
+          <div className="w-full h-[1px] bg-[#D9D9D9]"></div>
+          <div className="flex gap-[15px] items-center mt-[25px]">
+            <div className="bg-black p-[10px] rounded-[50%]"></div>
+            <p className="">Direct Bank Transfer</p>
+          </div>
+          <p className="text-[#9F9F9F] mt-[11px]">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
+          <div className="py-[25px]">
+            <label htmlFor="Bank" className="flex gap-[15px]">
+                <input type="radio" name="type" id="Bank" />
+                <p className="text-[#9F9F9F]" id="Bank">Direct Bank Transfer</p>
+            </label>
+            <label htmlFor="Cash" className="flex gap-[15px]">
+                <input type="radio" name="type" id="Cash" />
+                <p className="text-[#9F9F9F]" id="Cash">Cash On Delivery</p>
+            </label>
+          </div>
+          <p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <b>privacy policy.</b></p>
+          <div className="flex justify-center mt-[40px]">
             <button
               type="submit"
               className="text-[20px] py-[17px] px-[100px] border rounded-[15px]"
