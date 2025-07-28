@@ -68,9 +68,9 @@ const Checkout = () => {
       <CartProps title={"Checkout"} />
       <form
         onSubmit={handleSubmit}
-        className="container py-[63px] flex justify-between"
+        className="container py-[63px] flex justify-between max-[900px]:flex-col"
       >
-        <div className="w-[50%]">
+        <div className="w-[50%] max-[900px]:w-full">
           <p className="text-[36px] font-semibold">Billing details</p>
           <div className="flex gap-[30px] mt-[35px]">
             <div className="w-full">
@@ -79,7 +79,7 @@ const Checkout = () => {
                 name="fname"
                 required
                 type="text"
-                className="w-full border outline-0 border-[#9F9F9F] h-[75px] rounded-[10px] mt-[22px] indent-4"
+                className="w-full border outline-0 border-[#9F9F9F] h-[75px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
               />
             </div>
             <div className="w-full">
@@ -88,84 +88,84 @@ const Checkout = () => {
                 name="lname"
                 required
                 type="text"
-                className="w-full border outline-0 border-[#9F9F9F] h-[75px] rounded-[10px] mt-[22px] indent-4"
+                className="w-full border outline-0 border-[#9F9F9F] h-[75px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
               />
             </div>
           </div>
-          <div className="w-full mt-[36px]">
+          <div className="w-full mt-[36px] max-[450px]:mt-[1rem]">
             <p className="font-medium">Company Name (Optional)</p>
             <input
               name="cpmname"
               required
               type="text"
-              className="w-full border outline-0 border-[#9F9F9F] h-[75px] rounded-[10px] mt-[22px] indent-4"
+              className="w-full border outline-0 border-[#9F9F9F] h-[75px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
             />
           </div>
-          <div className="w-full mt-[36px]">
+          <div className="w-full mt-[36px] max-[450px]:mt-[1rem]">
             <p className="font-medium">Country / Region</p>
             <input
               name="country"
               required
               type="text"
-              className="w-full border outline-0 border-[#9F9F9F] h-[75px] rounded-[10px] mt-[22px] indent-4"
+              className="w-full border outline-0 border-[#9F9F9F] h-[75px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
             />
           </div>
-          <div className="w-full mt-[36px]">
+          <div className="w-full mt-[36px] max-[450px]:mt-[1rem]">
             <p className="font-medium">Street address</p>
             <input
               name="straddress"
               required
               type="text"
-              className="w-full border outline-0 border-[#9F9F9F] h-[75px] rounded-[10px] mt-[22px] indent-4"
+              className="w-full border outline-0 border-[#9F9F9F] h-[75px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
             />
           </div>
-          <div className="w-full mt-[36px]">
+          <div className="w-full mt-[36px] max-[450px]:mt-[1rem]">
             <p className="font-medium">Town / City</p>
             <input
               name="city"
               required
               type="text"
-              className="w-full border outline-0 border-[#9F9F9F] h-[75px] rounded-[10px] mt-[22px] indent-4"
+              className="w-full border outline-0 border-[#9F9F9F] h-[75px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
             />
           </div>
-          <div className="w-full mt-[36px]">
+          <div className="w-full mt-[36px] max-[450px]:mt-[1rem]">
             <p className="font-medium">Province</p>
             <input
               name="province"
               required
               type="text"
-              className="w-full border outline-0 border-[#9F9F9F] h-[75px] rounded-[10px] mt-[22px] indent-4"
+              className="w-full border outline-0 border-[#9F9F9F] h-[75px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
             />
           </div>
-          <div className="w-full mt-[36px]">
+          <div className="w-full mt-[36px] max-[450px]:mt-[1rem]">
             <p className="font-medium">ZIP code</p>
             <input
               name="code"
               required
               type="number"
-              className="w-full border outline-0 border-[#9F9F9F] h-[75px] rounded-[10px] mt-[22px] indent-4"
+              className="w-full border outline-0 border-[#9F9F9F] h-[75px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
             />
           </div>
-          <div className="w-full mt-[36px]">
+          <div className="w-full mt-[36px] max-[450px]:mt-[1rem]">
             <p className="font-medium">Phone</p>
             <input
               name="phone"
               required
               type="number"
-              className="w-full border outline-0 border-[#9F9F9F] h-[75px] rounded-[10px] mt-[22px] indent-4"
+              className="w-full border outline-0 border-[#9F9F9F] h-[75px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
             />
           </div>
-          <div className="w-full mt-[36px]">
+          <div className="w-full mt-[36px] max-[450px]:mt-[1rem]">
             <p className="font-medium">Email address</p>
             <input
               name="email"
               required
               type="text"
-              className="w-full border outline-0 border-[#9F9F9F] h-[75px] rounded-[10px] mt-[22px] indent-4"
+              className="w-full border outline-0 border-[#9F9F9F] h-[75px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
             />
           </div>
         </div>
-        <div className="w-[45%]">
+        <div className="w-[45%] max-[900px]:w-full max-[900px]:mt-[50px] sticky top-[100px] h-full">
           <div className="flex justify-between">
             <p className="font-medium text-[24px]">Product</p>
             <p className="font-medium text-[24px]">Subtotal</p>
@@ -203,7 +203,7 @@ const Checkout = () => {
           <div className="flex justify-center mt-[40px]">
             <button
               type="submit"
-              className="text-[20px] py-[17px] px-[100px] border rounded-[15px]"
+              className="text-[20px] py-[17px] px-[100px] border rounded-[15px] max-[500px]:py-[10px] max-[500px]:px-[50px]"
             >
               Place Order
             </button>
