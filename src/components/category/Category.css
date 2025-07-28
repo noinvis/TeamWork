@@ -1,0 +1,13 @@
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.navlink.active {
+  background: #d0a573;
+}
+.containerr {
+  max-width: 1240px;
+}

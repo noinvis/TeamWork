@@ -30,7 +30,7 @@ const Wishlist = () => {
       <section>
         <CartProps title={"Wishlist"}/>
         <div className="container mx-auto mb-[80px]">
-          <Products data={wishlist} title={"Wishlist"} />
+          <Products data={wishlist}  />
         </div>
         <SectionProps />
       </section>
