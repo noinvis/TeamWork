@@ -78,7 +78,7 @@ const Cart = () => {
             ))}
           </div>
         </div>
-        <div className="bg-[#F9F1E7] pb-[80px] w-[400px] h-[400px] flex flex-col items-center max-[1050px]:w-full">
+        <div className="bg-[#F9F1E7] pb-[80px] w-[400px] flex flex-col items-center max-[1050px]:w-full sticky top-[100px] h-full">
           <p className="text-center font-semibold text-[32px] mt-[15px]">
             Cart Totals
           </p>

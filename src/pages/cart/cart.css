@@ -9,6 +9,5 @@
     transition: .3s ease-out;
 }
 .link.active{
-    text-decoration: underline;
     color: #B88E2F;
 }
