@@ -8,6 +8,8 @@ import Cart from "./pages/cart/Cart";
 import Contact from "./pages/contact/Contact";
 import Shop from "./pages/shop/Shop";
 import CategoryItem from "./pages/categoryItem/CategoryItem";
+import Blog from "./pages/blog/Blog";
+import Checkout from "./pages/checkout/Checkout";
 
 const App = () => {
   return (
@@ -18,8 +20,9 @@ const App = () => {
           <Route path="/product/:id" element={<DetailProduct />} />
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/cart" element={<Cart />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/products/category/:type" element={<CategoryItem />} />
           <Route path="/contact" element={<Contact />} />
         </Route>
