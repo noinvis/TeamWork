@@ -21,9 +21,9 @@ const Cart = () => {
     return (
         <div className="h-[65vh] flex justify-center items-center flex-col">
             <img src={nth} alt="" width={300}/>
-            <p className="text-[30px] text-center max-[450px]:text-[25px]">Savatingiz hozircha bo'sh</p>
-            <p className="mt-[1rem] text-center">Bosh sahifadan boshlang — kerakli tovarni qidiruv orqali topishingiz yoki to'plamlarni ko'rishingiz mumkin</p>
-            <button className="py-[10px] px-[30px] bg-[#B88E2F] text-white rounded-[15px] mt-[1rem]" onClick={() => navigate("/")}>Bosh sahifa</button>
+            <p className="text-[30px] text-center max-[450px]:text-[25px]">Cart is Empty</p>
+            <p className="mt-[1rem] text-center">Start from the home page — you can search for the product you need or browse collections</p>
+            <button className="py-[10px] px-[30px] bg-[#B88E2F] text-white rounded-[15px] mt-[1rem]" onClick={() => navigate("/")}>Home</button>
         </div>
     )
   }
