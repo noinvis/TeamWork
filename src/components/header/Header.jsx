@@ -45,33 +45,33 @@ const Header = () => {
 
           <div className="flex gap-3 max-md:fixed max-md:bottom-0 max-md:left-0 max-md:w-full max-md:justify-evenly max-md:bg-white max-md:py-4 max-md:border-t max-md:border-gray-300 z-30">
             <NavLink
-              className={({ isActive }) => `${isActive ? "bg-[#B88E2F] duration-300 text-white rounded-[10px] drop-shadow-amber-600" : ""} py-[5px] px-[10px] text-[20px]`}
+              className={({ isActive }) => `${isActive ? "duration-300 text-[#B88E2F] rounded-[10px] drop-shadow-amber-600" : ""} text-[20px]`}
               to={"/search"}
             >
               <FiSearch />
             </NavLink>
             <NavLink
-              className={({ isActive }) => `${isActive ? "bg-[#B88E2F] duration-300 text-white rounded-[10px] drop-shadow-amber-600" : ""} py-[5px] px-[10px] text-[20px]`}
+              className={({ isActive }) => `${isActive ? "duration-300 text-[#B88E2F] rounded-[10px] drop-shadow-amber-600" : ""} text-[20px]`}
               to={"/wishlist"}
             >
               <FiHeart />
             </NavLink>
             <NavLink
               className={({ isActive }) =>
-                `md:hidden ${isActive ? "bg-[#B88E2F] duration-300 text-white rounded-[10px] drop-shadow-amber-600" : ""} py-[5px] px-[10px] text-[20px]`
+                `md:hidden ${isActive ? "duration-300 text-[#B88E2F] rounded-[10px] drop-shadow-amber-600" : ""} text-[20px]`
               }
               to={"/"}
             >
               <IoHomeOutline />
             </NavLink>
             <NavLink
-              className={({ isActive }) => `${isActive ? "bg-[#B88E2F] duration-300 text-white rounded-[10px] drop-shadow-amber-600" : ""} py-[5px] px-[10px] text-[20px]`}
+              className={({ isActive }) => `${isActive ? "duration-300 text-[#B88E2F] rounded-[10px] drop-shadow-amber-600" : ""} text-[20px]`}
               to={"/cart"}
             >
               <IoCartOutline />
             </NavLink>
             <NavLink
-              className={({ isActive }) => `${isActive ? "bg-[#B88E2F] duration-300 text-white rounded-[10px] drop-shadow-amber-600" : ""} py-[5px] px-[10px] text-[20px]`}
+              className={({ isActive }) => `${isActive ? "duration-300 text-[#B88E2F] rounded-[10px] drop-shadow-amber-600" : ""} text-[20px]`}
               to={"/profile"}
             >
               <CiUser />
