@@ -16,7 +16,7 @@ const Wishlist = () => {
           </div>
           <div className="mx-auto">
             <h2 className="text-center text-[#b88e2f] mt-[20px] text-[30px] ">
-              Your have not current favorite product
+              You have not current favorite product
             </h2>
             <p className="text-center text-[#965505] font-medium">
               Please choose your liked product
