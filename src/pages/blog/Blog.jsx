@@ -13,6 +13,8 @@ import {
   post4,
   post5,
 } from "./import"; 
+import CartProps from "../cart/cart-props/CartProps";
+import SectionProps from "../cart/section-props/SectionProps";
 
 
 
