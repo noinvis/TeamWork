@@ -19,6 +19,10 @@ const Checkout = () => {
     0
   );
 
+  useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -35,10 +39,6 @@ const Checkout = () => {
     text += `ZIP Code : <b>${data.code}</b> %0A`;
     text += `Phone Number : <b>${data.phone}</b> %0A`;
     text += `Email Address : <b>${data.email}</b> %0A%0A`;
-
-    useLayoutEffect(() => {
-        window.scrollTo(0, 0);
-      }, []);
 
     cart.forEach((item) => {
       text += `Title: <b>${item.title}</b> %0A`;
