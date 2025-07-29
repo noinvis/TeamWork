@@ -4,7 +4,7 @@ import logo from '../img/logo.png'
 import { useNavigate } from "react-router-dom";
 
 const CartProps = ({title}) => {
-    const navigate = useNavigate()
+  const navigate = useNavigate()
   return (
     <section className="w-full mx-auto bg-cover bg-center min-h-[320px] flex items-center justify-center" style={{ backgroundImage: `url(${img})` }}>
       <div className="flex flex-col justify-between items-center">
