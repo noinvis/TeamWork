@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from "./img/Frame 168.png";
 import { NavLink, useNavigate } from "react-router-dom";
 import {
@@ -14,8 +14,22 @@ import { CiUser } from "react-icons/ci";
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   const navigate = useNavigate();
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (document.documentElement.scrollTop > 0) {
+        headerRef.current?.classList.add("shrink");
+      } else {
+        headerRef.current?.classList.remove("shrink");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <header className="z-30 sticky top-0 left-0 bg-white">
+    <header ref={headerRef} className="z-30 sticky top-0 left-0 bg-white">
       <div className="container w-full mx-auto">
         <nav className="flex md:flex-row items-center justify-between py-4 gap-4 md:gap-0">
           <div className="flex items-center space-x-2">

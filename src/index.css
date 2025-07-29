@@ -16,3 +16,7 @@
     padding-left: 16px;
     padding-right: 16px;
 }
+.shrink{
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
