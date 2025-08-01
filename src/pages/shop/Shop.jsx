@@ -26,7 +26,7 @@ const Shop = () => {
       .catch((err) => setErr(err))
       .finally(() => setLoad(false));
   };
-  console.log(seeMore);
+  
 
   const birlashgan = (data?.products || []).concat(seeMore);
 
