@@ -43,7 +43,7 @@ const Home = () => {
         hover:bg-[#B88E2F] hover:text-[#fff] font-bold block mx-auto mt-[32px]
           active:scale-[.98]"
       >
-        Show more{" "}
+        Show more
       </button>
     </div>
   );

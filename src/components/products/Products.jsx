@@ -5,12 +5,15 @@ import { useNavigate } from "react-router-dom";
 import { FcLike } from "react-icons/fc";
 import { PiHeart } from "react-icons/pi";
 import { useStore } from "../../zustand/useStore";
-import { RiShoppingCartLine } from "react-icons/ri";
 import { useCart } from "../../zustand/useCart";
+import { RiShoppingCartLine } from "react-icons/ri";
+
+import { RiShoppingCartFill } from "react-icons/ri";
 
 const Products = ({ data, error, loading, title }) => {
   const { toggleWishlist, wishlist } = useStore();
-  const {add} = useCart()
+  // const { h } = useCart();
+  const { add, cart } = useCart();
 
   const navigate = useNavigate();
 
@@ -61,8 +64,15 @@ const Products = ({ data, error, loading, title }) => {
                     )}
                   </button>
 
-                  <button className="p-[8px] rounded-[50%] bg-[dodgerblue]" onClick={()=> add(item)}>
-                    <RiShoppingCartLine className="text-[24px] text-[#fff] max-[700px]:text-[18px]" />
+                  <button
+                    className="p-[8px] rounded-[50%] bg-[dodgerblue]"
+                    onClick={() => add(item)}
+                  >
+                    {cart.some((product) => product.id === item.id) ? (
+                      <RiShoppingCartFill className="text-[24px] text-[#fff] max-[700px]:text-[18px]" />
+                    ) : (
+                      <RiShoppingCartLine className="text-[24px] text-[#fff] max-[700px]:text-[18px]" />
+                    )}
                   </button>
                 </div>
               </div>
