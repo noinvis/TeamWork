@@ -17,7 +17,7 @@ const Checkout = () => {
   const totalPrice = cart.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
-  );
+  ).toFixed(2)
 
   useLayoutEffect(() => {
         window.scrollTo(0, 0);
