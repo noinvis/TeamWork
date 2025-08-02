@@ -83,7 +83,7 @@ const Checkout = () => {
                 name="fname"
                 required
                 type="text"
-                className="w-full border outline-0 border-[#9F9F9F] h-[75px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
+                className="w-full border outline-0 border-[#9F9F9F] h-[50px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
               />
             </div>
             <div className="w-full">
@@ -92,7 +92,7 @@ const Checkout = () => {
                 name="lname"
                 required
                 type="text"
-                className="w-full border outline-0 border-[#9F9F9F] h-[75px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
+                className="w-full border outline-0 border-[#9F9F9F] h-[50px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
               />
             </div>
           </div>
@@ -102,7 +102,7 @@ const Checkout = () => {
               name="cpmname"
               required
               type="text"
-              className="w-full border outline-0 border-[#9F9F9F] h-[75px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
+              className="w-full border outline-0 border-[#9F9F9F] h-[50px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
             />
           </div>
           <div className="w-full mt-[36px] max-[450px]:mt-[1rem]">
@@ -111,7 +111,7 @@ const Checkout = () => {
               name="country"
               required
               type="text"
-              className="w-full border outline-0 border-[#9F9F9F] h-[75px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
+              className="w-full border outline-0 border-[#9F9F9F] h-[50px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
             />
           </div>
           <div className="w-full mt-[36px] max-[450px]:mt-[1rem]">
@@ -120,7 +120,7 @@ const Checkout = () => {
               name="straddress"
               required
               type="text"
-              className="w-full border outline-0 border-[#9F9F9F] h-[75px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
+              className="w-full border outline-0 border-[#9F9F9F] h-[50px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
             />
           </div>
           <div className="w-full mt-[36px] max-[450px]:mt-[1rem]">
@@ -129,7 +129,7 @@ const Checkout = () => {
               name="city"
               required
               type="text"
-              className="w-full border outline-0 border-[#9F9F9F] h-[75px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
+              className="w-full border outline-0 border-[#9F9F9F] h-[50px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
             />
           </div>
           <div className="w-full mt-[36px] max-[450px]:mt-[1rem]">
@@ -138,7 +138,7 @@ const Checkout = () => {
               name="province"
               required
               type="text"
-              className="w-full border outline-0 border-[#9F9F9F] h-[75px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
+              className="w-full border outline-0 border-[#9F9F9F] h-[50px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
             />
           </div>
           <div className="w-full mt-[36px] max-[450px]:mt-[1rem]">
@@ -147,7 +147,7 @@ const Checkout = () => {
               name="code"
               required
               type="number"
-              className="w-full border outline-0 border-[#9F9F9F] h-[75px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
+              className="w-full border outline-0 border-[#9F9F9F] h-[50px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
             />
           </div>
           <div className="w-full mt-[36px] max-[450px]:mt-[1rem]">
@@ -156,7 +156,7 @@ const Checkout = () => {
               name="phone"
               required
               type="number"
-              className="w-full border outline-0 border-[#9F9F9F] h-[75px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
+              className="w-full border outline-0 border-[#9F9F9F] h-[50px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
             />
           </div>
           <div className="w-full mt-[36px] max-[450px]:mt-[1rem]">
@@ -165,7 +165,7 @@ const Checkout = () => {
               name="email"
               required
               type="text"
-              className="w-full border outline-0 border-[#9F9F9F] h-[75px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
+              className="w-full border outline-0 border-[#9F9F9F] h-[50px] focus:border-[#B88E2F] focus:border-[2px] max-[700px]:h-[45px] rounded-[10px] mt-[22px] max-[450px]:mt-[1rem] indent-4"
             />
           </div>
         </div>
