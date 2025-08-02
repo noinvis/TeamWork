@@ -18,6 +18,9 @@ const Checkout = () => {
     (sum, item) => sum + item.price * item.quantity,
     0
   ).toFixed(2)
+  const subtotalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity,
+    0
+  ).toFixed(2)
 
   useLayoutEffect(() => {
         window.scrollTo(0, 0);
@@ -180,7 +183,7 @@ const Checkout = () => {
                 {item.title}
                 <span className="text-black">&#10006; {item.quantity}</span>
               </p>
-              <p>Rs.{item.price.toFixed(2) * item.quantity}</p>
+              <p>Rs.{subtotalPrice}</p>
             </div>
           ))}
           <div className="flex justify-between my-2 items-center">
