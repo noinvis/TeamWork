@@ -180,7 +180,7 @@ const Checkout = () => {
                 {item.title}
                 <span className="text-black">&#10006; {item.quantity}</span>
               </p>
-              <p>Rs.{item.price * item.quantity}</p>
+              <p>Rs.{item.price.toFixed(2) * item.quantity}</p>
             </div>
           ))}
           <div className="flex justify-between my-2 items-center">
