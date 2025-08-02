@@ -49,7 +49,7 @@ const Checkout = () => {
       (sum, item) => sum + item.price * item.quantity,
       0
     );
-    text += `Total Price: <b>${totalPrice}</b>`;
+    text += `Total Price: <b>${totalPrice.toFixed(2)}</b>`;
 
     axios
       .get(
