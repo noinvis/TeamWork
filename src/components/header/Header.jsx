@@ -9,6 +9,8 @@ import {
 } from "react-icons/io5";
 import { FiHeart, FiSearch} from "react-icons/fi";
 import { CiUser } from "react-icons/ci";
+import { LuCircleUserRound } from "react-icons/lu";
+import { HiOutlineUserCircle } from "react-icons/hi2";
 
 
 const Header = () => {
@@ -88,7 +90,7 @@ const Header = () => {
               className={({ isActive }) => `${isActive ? "duration-300 text-[#B88E2F] rounded-[10px] drop-shadow-amber-600" : ""} text-[20px]`}
               to={"/profile"}
             >
-              <CiUser />
+              <HiOutlineUserCircle />
             </NavLink>
           </div>
 
