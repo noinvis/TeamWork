@@ -9,28 +9,36 @@ const Wishlist = () => {
 
   if (wishlist.length == 0) {
     return (
-      <section className="mb-[120px] mt-[70px]">
-        <div className="container mx-auto">
-          <div className="mx-auto w-[50%] max-[1000px]:w-[80%] max-[600px]:w-[100%] ">
-            <img className="block mx-auto max-w-[250px]" src={product} alt="" />
+      <>
+        <CartProps title={"Wishlist"} />
+        <section className="mb-[120px] mt-[70px]">
+          <div className="container mx-auto">
+            <div className="mx-auto w-[50%] max-[1000px]:w-[80%] max-[600px]:w-[100%] ">
+              <img
+                className="block mx-auto max-w-[250px]"
+                src={product}
+                alt=""
+              />
+            </div>
+            <div className="mx-auto">
+              <h2 className="text-center text-[#b88e2f] mt-[20px] text-[30px] ">
+                You have not current favorite product
+              </h2>
+              <p className="text-center text-[#965505] font-medium">
+                Please choose your liked product
+              </p>
+            </div>
           </div>
-          <div className="mx-auto">
-            <h2 className="text-center text-[#b88e2f] mt-[20px] text-[30px] ">
-              You have not current favorite product
-            </h2>
-            <p className="text-center text-[#965505] font-medium">
-              Please choose your liked product
-            </p>
-          </div>
-        </div> 
-      </section>
+        </section>
+        <SectionProps />
+      </>
     );
   } else {
     return (
       <section>
-        <CartProps title={"Wishlist"}/>
+        <CartProps title={"Wishlist"} />
         <div className="container mx-auto mb-[80px]">
-          <Products data={wishlist}  />
+          <Products data={wishlist} />
         </div>
         <SectionProps />
       </section>
