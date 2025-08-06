@@ -10,10 +10,12 @@ import Shop from "./pages/shop/Shop";
 import CategoryItem from "./pages/categoryItem/CategoryItem";
 import Blog from "./pages/blog/Blog";
 import Checkout from "./pages/checkout/Checkout";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
     <BrowserRouter>
+      <Toaster position="top-center" />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index={true} element={<Home />} />

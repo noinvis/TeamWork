@@ -4,6 +4,7 @@ import SectionProps from "../cart/section-props/SectionProps";
 import { useCart } from "../../zustand/useCart";
 import { Navigate } from "react-router-dom";
 import axios from "axios";
+import toast from 'react-hot-toast'
 
 const BOT_TOKEN = "8491754994:AAEAY63AAepcM30C8ODBZy7A01dENr1sbU8";
 const USER_ID = "2092970039";
@@ -61,7 +62,9 @@ const Checkout = () => {
       .then(() => {
         e.target.reset();
         clear();
-        alert("Buyurtma muvaffaqiyatli yuborildi!");
+        toast.success('Buyurtmangiz yuborildi!', {
+          duration: 3000,
+        })
       })
       .catch((err) => {
         console.log(err);
