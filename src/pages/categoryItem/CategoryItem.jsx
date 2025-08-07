@@ -34,7 +34,9 @@ const CategoryItem = () => {
     return (
       <section>
         <CartProps title={type} />
+
         <Category />
+
         <Products data={data?.products} />
         <SectionProps />
       </section>
