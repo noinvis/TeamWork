@@ -12,7 +12,7 @@ const Category = () => {
 
   return (
     <div className="bg-[#F9F1E7]">
-      <div className="flex items-center   h-[100px] scrollbar-hide overflow-x-auto  border-[#c2c2c2] border-l-[1.5px] border-r-[1.5px] px-[3px]">
+      <div className=" container mx-auto flex items-center   h-[100px] scrollbar-hide overflow-x-auto  border-[#c2c2c2]  px-[3px]">
         <ul className="flex items-center mx-auto  text-nowrap gap-[10px]  ">
           <li>
             <NavLink
