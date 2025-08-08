@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import CartProps from "../cart/cart-props/CartProps";
 import SectionProps from "../cart/section-props/SectionProps";
 import Products from "../../components/products/Products";
@@ -85,7 +85,7 @@ const Search = () => {
     <>
       <CartProps title={"Search something"} />
 
-      <div className="container   mx-auto flex items-center justify-center">
+      <div className="container mx-auto flex items-center justify-center mt-[30px]">
         <form className="w-[100%] " onSubmit={(e) => e.preventDefault()} action="">
           <div className="flex  items-center mx-auto max-w-[500px] border p-[10px] gap-[10px] rounded-[12px]">
             <FiSearch />
@@ -113,4 +113,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default memo(Search);
