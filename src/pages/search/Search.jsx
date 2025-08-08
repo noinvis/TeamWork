@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import CartProps from "../cart/cart-props/CartProps";
 import SectionProps from "../cart/section-props/SectionProps";
 import Products from "../../components/products/Products";
@@ -113,4 +113,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default memo(Search);

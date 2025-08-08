@@ -7,8 +7,8 @@ import img from "./images/Group 88.png";
 import img2 from "./images/facebook.png";
 import img3 from "./images/in.png";
 import img4 from "./images/twitter.png";
-import img5 from "./images/kreslo.png"
-import img6 from "./images/kreslo2.png"
+import img5 from "./images/kreslo.png";
+import img6 from "./images/kreslo2.png";
 import ExtraProduct from "./extra-product/ExtraProduct";
 import { useCart } from "../../zustand/useCart";
 
@@ -17,8 +17,8 @@ const DetailProduct = () => {
   const [imageIndex, setImageIndex] = useState(0);
   const { data, error, loading } = useFetch(`/product/${id}`);
   const [num, setNum] = useState(1);
-  const navigate = useNavigate()
-  const {add} = useCart()
+  const navigate = useNavigate();
+  const { add } = useCart();
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
@@ -97,13 +97,24 @@ const DetailProduct = () => {
           </div>
           <div className="flex gap-[1rem] mt-[20px] max-[1150px]:justify-center max-[560px]:flex-wrap">
             <div className="border1 flex gap-[35px] items-center rounded-[10px] py-[18px] px-[10px] max-[560px]:w-full max-[560px]:justify-center">
-              <button onClick={() => setNum((p) => (p > 1 ? p - 1 : 1))} className="text-[20px] max-[560px]:text-[30px]">
+              <button
+                onClick={() => setNum((p) => (p > 1 ? p - 1 : 1))}
+                className="text-[20px] max-[560px]:text-[30px]"
+              >
                 -
               </button>
               <p className="text-[18px] font-medium">{num}</p>
-              <button onClick={() => setNum((p) => p + 1)} className="max-[560px]:text-[30px] text-[20px]">+</button>
+              <button
+                onClick={() => setNum((p) => p + 1)}
+                className="max-[560px]:text-[30px] text-[20px]"
+              >
+                +
+              </button>
             </div>
-            <button onClick={()=> add({...data})} className="border1 rounded-[10px] capitalize text-[20px] px-[40px] py-[20px] max-[560px]:w-full">
+            <button
+              onClick={() => add({ ...data })}
+              className="border1 rounded-[10px] capitalize text-[20px] px-[40px] py-[20px] max-[560px]:w-full"
+            >
               Add To Cart
             </button>
             <button className="border1 rounded-[10px] text-[20px] px-[40px] py-[20px] max-[560px]:w-full">
@@ -171,10 +182,7 @@ const DetailProduct = () => {
       <section className="container py-[55px]">
         <p className="text-center text-[36px] font-medium">Related Products</p>
         <div>
-          <ExtraProduct/>
-        </div>
-        <div className="flex justify-center mt-[30px]">
-          <button className="border2 text-[#B88E2F] hover:text-white hover:bg-[#B88E2F] duration-300 py-[12px] px-[74px]" onClick={() => navigate(-1)}>Go Back</button>
+          <ExtraProduct category={data.category} />
         </div>
       </section>
       <div className="w-full h-[1px] bg-[#D9D9D9] mb-[30px]"></div>
