@@ -4,7 +4,7 @@ import Products from "../../components/products/Products";
 import product from "../../assets/empty.webp";
 import CartProps from "../cart/cart-props/CartProps";
 import SectionProps from "../cart/section-props/SectionProps";
-import Logo from "../../components/logo/Logo";
+
 const Wishlist = () => {
   const { wishlist } = useStore();
 
