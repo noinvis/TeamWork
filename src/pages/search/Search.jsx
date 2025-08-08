@@ -85,7 +85,7 @@ const Search = () => {
     <>
       <CartProps title={"Search something"} />
 
-      <div className="container   mx-auto flex items-center justify-center">
+      <div className="container mx-auto flex items-center justify-center mt-[30px]">
         <form className="w-[100%] " onSubmit={(e) => e.preventDefault()} action="">
           <div className="flex  items-center mx-auto max-w-[500px] border p-[10px] gap-[10px] rounded-[12px]">
             <FiSearch />
