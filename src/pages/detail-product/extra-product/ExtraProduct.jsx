@@ -4,7 +4,7 @@ import Products from "../../../components/products/Products";
 import { useNavigate } from "react-router-dom";
 
 const ExtraProduct = ({ category }) => {
-  const { data, error, loading } = useFetch(`/products/category/${category}`);
+  const { data, error, loading } = useFetch(`/products/category/${category}`, {limit: 4});
   const navigate = useNavigate()
 
   useLayoutEffect(() => {
@@ -15,7 +15,7 @@ const ExtraProduct = ({ category }) => {
     return <p>Something went wrong :(</p>;
   }
 
-  const filteredProducts = data?.products?.slice(0, 4);
+  const filteredProducts = data?.products
 
   return (
     <>
