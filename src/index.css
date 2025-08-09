@@ -21,7 +21,7 @@
   transition: 0.3s ease;
 }
 .iconCircle {
-  animation: animation 1s linear infinite;
+  animation: animation 1.5s linear infinite;
 }
 @keyframes animation {
   0% {

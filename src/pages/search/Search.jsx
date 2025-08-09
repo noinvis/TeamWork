@@ -87,21 +87,18 @@ const Search = () => {
     <>
       <CartProps title={"Search something"} />
 
-            <input
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              className="outline-none flex-1 "
-              type="text"
-              name=""
-              placeholder="Search..."
-              id=""
-            />
-            <button className="border duration-150 w-[20%] py-[8px] rounded-[7px] text-[#fff] bg-[#B88E2F] hover:bg-[#b88f2fe0]">
-              Search
-            </button>
-          </div>
-        </form>
-      </div>
+      <input
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        className="outline-none flex-1 "
+        type="text"
+        name=""
+        placeholder="Search..."
+        id=""
+      />
+      <button className="border duration-150 w-[20%] py-[8px] rounded-[7px] text-[#fff] bg-[#B88E2F] hover:bg-[#b88f2fe0]">
+        Search
+      </button>
 
       <Products
         loading={load}
