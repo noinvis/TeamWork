@@ -44,10 +44,12 @@ const Search = () => {
           <div className="container mx-auto ">
             <div className="  py-[12px]  flex items-center justify-around">
               <div>
-                <h2 className="text-[20px] font-bold">Furniro</h2>
+                <h2 className="text-[20px] font-bold  max-[520px]:hidden">
+                  Furniro
+                </h2>
               </div>
               <form
-                className="w-[40%] "
+                className="w-[40%] max-[850px]:w-[80%] max-[520px]:w-[100%]"
                 onSubmit={(e) => e.preventDefault()}
                 action=""
               >
@@ -90,12 +92,14 @@ const Search = () => {
 
       <div className="bg-[#f9edd2e0]">
         <div className="container mx-auto py-[12px]">
-          <div className=" flex items-center justify-around">
+          <div className=" flex items-center justify-around max-[850px]:justify-between">
             <div>
-              <h2 className="text-[20px] font-bold">Furniro</h2>
+              <h2 className="text-[20px] font-bold max-[520px]:hidden">
+                Furniro
+              </h2>
             </div>
             <form
-              className=" w-[40%]"
+              className=" w-[40%] max-[850px]:w-[80%] max-[520px]:w-[100%]"
               onSubmit={(e) => e.preventDefault()}
               action=""
             >
