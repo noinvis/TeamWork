@@ -5,9 +5,3 @@
 *{
     font-family: "Poppins", sans-serif;
 }
-.link{
-    transition: .3s ease-out;
-}
-.link.active{
-    color: #B88E2F;
-}
