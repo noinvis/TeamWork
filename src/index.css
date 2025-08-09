@@ -16,6 +16,13 @@
   padding-left: 16px;
   padding-right: 16px;
 }
+.link{
+    transition: .3s ease-out;
+    font-weight: 500;
+}
+.link.active{
+    color: #B88E2F;
+}
 .shrink {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   transition: 0.3s ease;
