@@ -87,22 +87,31 @@ const Search = () => {
     <>
       <CartProps title={"Search something"} />
 
-            <input
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              className="outline-none flex-1 "
-              type="text"
-              name=""
-              placeholder="Search..."
-              id=""
-            />
-            <button className="border duration-150 w-[20%] py-[8px] rounded-[7px] text-[#fff] bg-[#B88E2F] hover:bg-[#b88f2fe0]">
-              Search
-            </button>
-          </div>
-        </form>
+      <div className="container mx-auto ">
+        <div className="container   mx-auto flex items-center justify-center">
+          <form
+            className="w-[100%] "
+            onSubmit={(e) => e.preventDefault()}
+            action=""
+          >
+            <div className="flex  items-center mx-auto max-w-[500px] overflow-hidden border p-[5px] gap-[10px] rounded-[12px]">
+              <FiSearch className="text-[20px] ml-[10px] text-[#B88E2F]" />
+              <input
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+                className="outline-none flex-1 "
+                type="text"
+                name=""
+                placeholder="Search..."
+                id=""
+              />
+              <button className="border duration-150 w-[20%] py-[8px] rounded-[7px] text-[#fff] bg-[#B88E2F] hover:bg-[#b88f2fe0]">
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-
       <Products
         loading={load}
         error={err}
